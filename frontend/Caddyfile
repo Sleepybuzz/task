@@ -1,4 +1,8 @@
-:$PORT
+{
+    admin off
+}
+
+:{$PORT:3000}
 
 encode gzip
 
