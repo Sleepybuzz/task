@@ -1,0 +1,28 @@
+.page-content {
+  padding: 32px;
+  min-height: 100vh;
+}
+
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.page-header h1 {
+  font-size: 1.75rem;
+  margin-bottom: 4px;
+}
+
+.page-subtitle {
+  color: var(--text-2);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 600px) {
+  .page-content { padding: 20px 16px; }
+  .page-header h1 { font-size: 1.4rem; }
+}

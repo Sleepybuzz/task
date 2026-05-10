@@ -1,0 +1,82 @@
+.dashboard { max-width: 1200px; }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 20px 16px;
+  transition: all var(--transition);
+}
+.stat-card:hover { transform: translateY(-2px); }
+.stat-card.urgent { border-color: rgba(239,68,68,0.3); }
+
+.stat-icon { font-size: 1.5rem; margin-bottom: 8px; }
+.stat-value { font-family: var(--font-display); font-size: 2rem; font-weight: 800; line-height: 1; margin-bottom: 4px; }
+.stat-label { font-size: 0.75rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.08em; }
+
+.dash-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.dash-section { padding: 20px; }
+.section-title { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; margin-bottom: 16px; color: var(--text); }
+
+/* Task row */
+.task-list { display: flex; flex-direction: column; gap: 8px; }
+.task-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 12px; border-radius: var(--radius-sm);
+  background: var(--bg-3); gap: 12px;
+  transition: background var(--transition);
+}
+.task-row:hover { background: var(--bg-4); }
+.task-row-left { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0; }
+.task-row-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.priority-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.task-title-sm { font-size: 0.85rem; font-weight: 500; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.task-project-label { font-size: 0.7rem; padding: 2px 8px; border-radius: 99px; margin-top: 2px; display: inline-block; }
+.due-date { font-size: 0.75rem; color: var(--text-3); }
+.due-date.overdue { color: var(--red); }
+
+/* Progress */
+.project-progress-list { display: flex; flex-direction: column; gap: 14px; }
+.project-progress-row { display: flex; flex-direction: column; gap: 6px; padding: 12px; border-radius: var(--radius-sm); background: var(--bg-3); transition: background var(--transition); }
+.project-progress-row:hover { background: var(--bg-4); }
+.pp-header { display: flex; align-items: center; gap: 8px; }
+.pp-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.pp-name { flex: 1; font-size: 0.875rem; font-weight: 500; }
+.pp-pct { font-size: 0.75rem; color: var(--text-2); font-weight: 600; }
+.pp-counts { display: flex; gap: 12px; font-size: 0.7rem; color: var(--text-3); }
+.progress-bar { height: 4px; background: var(--bg-4); border-radius: 2px; overflow: hidden; }
+.progress-fill { height: 100%; background: var(--accent); border-radius: 2px; transition: width 0.4s ease; }
+
+/* Workload */
+.workload-list { display: flex; flex-direction: column; gap: 12px; }
+.workload-row { display: flex; align-items: center; gap: 12px; }
+.avatar-sm { width: 30px; height: 30px; font-size: 0.75rem; }
+.workload-info { flex: 1; }
+.workload-name-row { display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 0.875rem; }
+.workload-count { font-size: 0.75rem; color: var(--text-3); }
+
+/* Activity */
+.activity-list { display: flex; flex-direction: column; gap: 8px; }
+.activity-row { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: var(--radius-sm); background: var(--bg-3); transition: background var(--transition); }
+.activity-row:hover { background: var(--bg-4); }
+.activity-info { flex: 1; min-width: 0; }
+.activity-title { font-size: 0.85rem; font-weight: 500; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.activity-meta { font-size: 0.72rem; color: var(--text-3); }
+
+@media (max-width: 900px) {
+  .stats-grid { grid-template-columns: repeat(3, 1fr); }
+  .dash-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
