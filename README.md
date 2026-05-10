@@ -143,3 +143,21 @@ JWT_SECRET=your_custom_secret
 ```
 
 Create a `.env` file in the `backend/` directory.
+
+1. Sign up as User 1 (will be Admin)
+
+Go to your app → Sign Up
+Name: USER, Email: user@example.com, Password: 123456
+She creates a project → automatically becomes Admin of that project
+
+2. Sign up as User 2 (will be Member)
+
+Open an incognito window (so you're logged in as two users simultaneously)
+Sign Up → Name: user2, Email: user2@example.com, Password: 123456
+Bob has no projects yet
+
+3. USER adds user2 to her project
+
+Log in as USER → open the project → click Members button
+Enter user2@example.com → Role: Member → click Add
+user2 is now a Member of that project
